@@ -1,26 +1,25 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { remove, useCards } from '../../store/cardsSlice'
+import { useAppSelector } from '../../store/hooks'
+import { useCards } from '../../store/cardsSlice'
+import { Card } from '../Card'
+
+import './styles.scss'
 
 export function CardsContainer() {
-  const cards = useSelector(useCards)
-
-  const dispatch = useDispatch()
-
-  function handleRemoveCard() {
-    dispatch(
-      remove({
-        age: 25,
-        email: 'madsjjasdsudau@gmail.com',
-        firstName: 'samksdsamkm',
-        lastName: 'damsdsadsajsjda'
-      })
-    )
-    console.log(cards)
-  }
+  const cards = useAppSelector(useCards)
 
   return (
-    <div>
-      <button onClick={handleRemoveCard} />
-    </div>
+    <main>
+      <div className="cardsGrid">
+        {cards.map((item, index) => (
+          <Card
+            key={index}
+            firstName={item.firstName}
+            lastName={item.lastName}
+            email={item.email}
+            age={item.age}
+          />
+        ))}
+      </div>
+    </main>
   )
 }

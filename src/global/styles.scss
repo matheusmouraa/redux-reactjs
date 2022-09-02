@@ -6,7 +6,14 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  background: #f8f8f8;
-  color: #29292e;
+#container {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+
+  background: #0e1647;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }

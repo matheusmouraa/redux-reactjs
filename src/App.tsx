@@ -9,8 +9,10 @@ import './global/styles.scss'
 function App() {
   return (
     <Provider store={store}>
-      <FormContainer />
-      <CardsContainer />
+      <div id="container">
+        <FormContainer />
+        <CardsContainer />
+      </div>
     </Provider>
   )
 }

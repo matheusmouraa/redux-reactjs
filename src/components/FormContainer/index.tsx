@@ -1,22 +1,18 @@
 import { Formik, Field, Form, FormikHelpers } from 'formik'
-import { schema } from '../../services/schema'
 
-import { useDispatch, useSelector } from 'react-redux'
+import { useAppDispatch, useAppSelector } from '../../store/hooks'
 import { add, useCards } from '../../store/cardsSlice'
 
 import { CardInfoType } from '../../@types'
+import { schema } from '../../services/schema'
 
 import './styles.scss'
 
 export function FormContainer() {
-  const cards = useSelector(useCards)
-
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   function handleSubmit(values: CardInfoType) {
-    console.log(values)
     dispatch(add(values))
-    console.log(cards)
   }
 
   return (
@@ -51,7 +47,7 @@ export function FormContainer() {
             <Field className="textInput" type="email" name="email" />
 
             <label className="label">Idade:</label>
-            <Field type="number" name="age" />
+            <Field className="numberInput" type="number" name="age" min="1" />
 
             <button type="submit">Criar</button>
           </Form>

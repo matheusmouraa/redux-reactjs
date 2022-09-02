@@ -1,18 +1,22 @@
-.container {
+aside {
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  height: 100vh;
-  width: 50%;
-  max-width: 590px;
+  flex: 7;
 
   background: #242424;
+
+  @media (min-width: 768px) {
+    max-width: 590px;
+
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
 }
 
-.title {
+h1 {
   margin-top: 2rem;
-  color: #fff;
+  color: #dde3f0;
 }
 
 .form {
@@ -24,8 +28,8 @@
   width: 45%;
 }
 
-.label {
-  color: #dedede;
+label {
+  color: #dde3f0;
 }
 
 .textInput {
@@ -39,5 +43,36 @@
   border-radius: 6px;
 
   font-size: 1rem;
-  color: #dedede;
+  color: #dde3f0;
+}
+
+.numberInput {
+  padding-left: 10px;
+
+  width: 40px;
+  height: 30px;
+
+  background: #696969;
+  box-shadow: 0px 0px 4px #595959;
+  border: 0;
+  border-radius: 6px;
+
+  font-size: 1rem;
+  color: #dde3f0;
+
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+button {
+  align-items: center;
+
+  height: 35px;
+
+  background: #e51c44;
+  border: 0;
+  border-radius: 6px;
+
+  color: #dde3f0;
 }

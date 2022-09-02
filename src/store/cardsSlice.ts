@@ -1,5 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+
 import { CardInfoType } from '../@types'
+import { RootState } from './store'
 
 const initialState: CardInfoType[] = []
 
@@ -21,6 +23,6 @@ const sliceCards = createSlice({
 export default sliceCards.reducer
 export const { add, remove } = sliceCards.actions
 
-export const useCards = (state: any) => {
+export const useCards = (state: RootState) => {
   return state.cards as CardInfoType[]
 }
