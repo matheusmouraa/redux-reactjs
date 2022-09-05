@@ -14,11 +14,6 @@ aside {
   }
 }
 
-h1 {
-  margin-top: 2rem;
-  color: #dde3f0;
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -26,6 +21,10 @@ h1 {
   gap: 1rem;
 
   width: 45%;
+
+  @media (max-width: 768px) {
+    margin: 2rem 0 2rem;
+  }
 }
 
 label {
@@ -74,5 +73,9 @@ button {
   border: 0;
   border-radius: 6px;
 
+  font-size: 1rem;
+  font-weight: 600;
   color: #dde3f0;
+
+  cursor: pointer;
 }

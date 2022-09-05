@@ -1,4 +1,4 @@
-import { Formik, Field, Form, FormikHelpers } from 'formik'
+import { Formik, Field, Form, FormikHelpers, ErrorMessage } from 'formik'
 
 import { useAppDispatch, useAppSelector } from '../../store/hooks'
 import { add, useCards } from '../../store/cardsSlice'
@@ -17,8 +17,6 @@ export function FormContainer() {
 
   return (
     <aside className="container">
-      <h1 className="title">Input</h1>
-
       <Formik
         initialValues={{
           firstName: '',
@@ -48,6 +46,8 @@ export function FormContainer() {
 
             <label className="label">Idade:</label>
             <Field className="numberInput" type="number" name="age" min="1" />
+
+            <ErrorMessage name="firstName" />
 
             <button type="submit">Criar</button>
           </Form>
