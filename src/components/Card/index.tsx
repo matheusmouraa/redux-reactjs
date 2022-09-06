@@ -1,5 +1,6 @@
 import { remove } from '../../store/cardsSlice'
 import { useAppDispatch } from '../../store/hooks'
+
 import { X } from 'react-feather'
 
 import { CardInfoType } from '../../@types'
@@ -20,7 +21,9 @@ export function Card({ firstName, lastName, email, age }: CardInfoType) {
       </button>
 
       <h2>{`Nome: ${firstName} ${lastName}`}</h2>
+
       <h2>{`E-mail: ${email}`}</h2>
+
       <h2>{`Idade: ${age}`}</h2>
     </div>
   )

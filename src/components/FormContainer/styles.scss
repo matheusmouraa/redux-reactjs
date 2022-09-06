@@ -7,7 +7,7 @@ aside {
   background: #242424;
 
   @media (min-width: 900px) {
-    max-width: 590px;
+    max-width: 37rem;
   }
 }
 
@@ -18,7 +18,7 @@ aside {
   gap: 1rem;
 
   width: 45%;
-  min-width: 320px;
+  min-width: 20rem;
 
   @media (min-width: 900px) {
     margin: auto;
@@ -32,27 +32,27 @@ label {
 .textInput {
   padding-left: 0.5rem;
 
-  height: 30px;
+  height: 1.8rem;
 
   background: #696969;
   box-shadow: 0px 0px 4px #595959;
   border: 0;
-  border-radius: 6px;
+  border-radius: 0.4rem;
 
   font-size: 1rem;
   color: #dde3f0;
 }
 
 .numberInput {
-  padding-left: 10px;
+  padding-left: 0.6rem;
 
-  width: 40px;
-  height: 30px;
+  width: 2.5rem;
+  height: 1.9rem;
 
   background: #696969;
   box-shadow: 0px 0px 4px #595959;
   border: 0;
-  border-radius: 6px;
+  border-radius: 0.4rem;
 
   font-size: 1rem;
   color: #dde3f0;
@@ -65,11 +65,11 @@ label {
 button {
   align-items: center;
 
-  height: 35px;
+  height: 2.2rem;
 
   background: #e51c44;
   border: 0;
-  border-radius: 6px;
+  border-radius: 0.4rem;
 
   font-size: 1rem;
   font-weight: 600;
