@@ -1,7 +1,7 @@
 import { Formik, Field, Form, FormikHelpers, ErrorMessage } from 'formik'
 
-import { useAppDispatch, useAppSelector } from '../../store/hooks'
-import { add, useCards } from '../../store/cardsSlice'
+import { useAppDispatch } from '../../store/hooks'
+import { add } from '../../store/cardsSlice'
 
 import { CardInfoType } from '../../@types'
 import { schema } from '../../services/schema'

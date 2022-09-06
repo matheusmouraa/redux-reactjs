@@ -9,11 +9,10 @@
 #container {
   display: flex;
   align-items: stretch;
+  flex-direction: column;
   height: 100vh;
 
-  background: #0e1647;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
+  @media (min-width: 900px) {
+    flex-direction: row;
   }
 }

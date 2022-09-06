@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import produce from 'immer'
 
 import { CardInfoType } from '../@types'
 import { RootState } from './store'
@@ -10,9 +11,7 @@ const sliceCards = createSlice({
   initialState,
   reducers: {
     add(state, { payload }: PayloadAction<CardInfoType>) {
-      if (!state.includes(payload)) {
-        state.push(payload)
-      }
+      state.push(payload)
     },
     remove(state, { payload }: PayloadAction<CardInfoType>) {
       state.splice(state.indexOf(payload), 1)
